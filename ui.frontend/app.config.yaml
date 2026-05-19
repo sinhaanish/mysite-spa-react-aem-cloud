@@ -1,0 +1,15 @@
+application:
+  actions: actions
+  runtimeManifest:
+    packages:
+      mysite-0.1.0:
+        license: Apache-2.0
+        actions:
+          ssr:
+            function: actions/ssr/index.js
+            web: 'yes'
+            runtime: nodejs:16
+            annotations:
+              require-adobe-auth: false
+            include:
+              - ["actions/common/app.js", "actions/common/app.js"]
